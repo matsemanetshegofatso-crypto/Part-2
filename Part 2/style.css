@@ -1,0 +1,139 @@
+/* ---------- Reset & base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffe6ef; /* replaces bgcolor="pink" */
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-header img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* ---------- Navigation ---------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Content ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Any image, anywhere on the site, scales down to fit its container
+   instead of overflowing or staying locked at a fixed pixel size */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Product images: responsive grid instead of fixed 200px squares */
+.product-gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* single column on mobile */
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.product-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+ul.reasons {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+  }
+
+  .site-header img {
+    order: 2; /* logo on the right, like align="right" did */
+    margin-bottom: 0;
+  }
+
+  h1 {
+    order: 1;
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .product-gallery {
+    grid-template-columns: repeat(3, 1fr); /* three columns */
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+  main {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}

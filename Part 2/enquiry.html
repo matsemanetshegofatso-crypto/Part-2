@@ -1,0 +1,147 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="#7B3F00">
+    <p style="text-align: center;">
+    <i><b>ENQUIRY</b></i>
+</p>
+<ul>
+    <li><a href="index.html">Home Page</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href= "enquiry.html">Enquiry</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+<style>
+  body {
+    background-color: #FFFDD0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+ 
+  .order-box {
+    background-color: #FFFDD0;
+    border: 1px solid #D2A679;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 480px;
+    width: 50%;
+  }
+ 
+  .order-box h1 {
+    font-size: 22px;
+    color: #7B3F00;
+    margin: 0 0 4px;
+  }
+ 
+  .order-box p.subtitle {
+    font-size: 13px;
+    color: #712B13;
+    margin: 0 0 20px;
+  }
+ 
+  label {
+    display: block;
+    font-size: 13px;
+    color: #4A1B0C;
+    margin-bottom: 4px;
+  }
+ 
+  input, select, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    padding: 8px;
+    border: 1px solid #D2A679;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+ 
+  textarea {
+    resize: vertical;
+  }
+ 
+  .row {
+    display: flex;
+    gap: 12px;
+  }
+ 
+  .row > div {
+    flex: 1;
+  }
+ 
+  button {
+    background-color: #7B3F00;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+  }
+ 
+  button:hover {
+    background-color: #5C4033;
+  }
+</style>
+<div class="order-box">
+    <h1>Place your oredr</h1>
+    <p class="subtitle">Fill in the details below and we'll get started.</p>
+
+    <form>
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="email" placeholder="Karabo Matsemane" required>
+        
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="karabo@email.com" required>
+
+        <lable for="phone">Phone number</lable>
+        <input type="tel" id="phone" name="phone" placeholder="076 824 1408">
+
+        <label for="product">Item</label>
+        <select id="product" name="product">
+            <option> Chocolate cake </option>
+            <option> Cupcakes</option>
+            <option > Vanilla cake</option>
+            <option> Custom order</option>       
+    </select>    
+
+<div class="row">
+    <div>
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1 required">
+    </div>
+    <div>
+        <label for="date">Delivery date</label>
+        <input type="date" id="date" name="date">
+    </div>
+</div>
+
+<label for="address">Delivery address</label>
+<input type="text" id="address" name="address" placeholder="9247 Forest Tea Street,Rua Vista">
+
+<label for="notes">Special requests</label>
+<textarea id="notes" name="notes" rows="3" placeholder="Any allergies, packing preferences or notes..."></textarea>
+
+<button type="submit">Place order</button>
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
